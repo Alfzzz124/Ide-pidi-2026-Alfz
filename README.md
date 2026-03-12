@@ -1,290 +1,291 @@
-# Ide-pidi-2026-Alfz
-Ide buat PIDI
+# AI Urban Farming Assistant
 
-Ide dasarnya sebenarnya bagus dan relevan banget dengan arah kebijakan sekarang: ketahanan pangan + urban farming + digitalisasi UMKM. Tinggal dirapihin supaya orang yang kamu ajak tim langsung kebayang produk dan peluangnya. Kalau masih berantakan, orang biasanya susah tertarik join.
+## Overview
 
-Aku rapihin jadi konsep yang lebih terstruktur tapi tetap fleksibel buat dikembangin.
+AI Urban Farming Assistant is a hackathon prototype web application
+designed to help urban residents start and manage small-scale farming
+such as hydroponics, balcony gardens, and home vegetable gardens.
 
+The platform combines artificial intelligence with expert discovery to
+guide users through the entire urban farming journey --- from planning
+their first garden to diagnosing plant problems and connecting with
+professional urban farming experts.
 
----
+This project is built as a proof-of-concept prototype intended to
+demonstrate the potential of AI-assisted agriculture in urban
+environments.
 
-Konsep Awal Proposal PIDI
+------------------------------------------------------------------------
 
-Platform E-Commerce & Services untuk Urban Farming
+# Product Vision
 
-1. Latar Belakang
+Urban farming is becoming increasingly popular, but many beginners
+struggle with:
 
-Urbanisasi menyebabkan semakin berkurangnya lahan pertanian di perkotaan. Di sisi lain, kebutuhan pangan terus meningkat. Urban farming menjadi salah satu solusi untuk meningkatkan ketersediaan pangan di lingkungan perkotaan.
+-   Not knowing where to start
+-   Choosing suitable plants
+-   Setting up hydroponic systems
+-   Diagnosing plant diseases
+-   Managing nutrients and pests
 
-Namun saat ini masih ada beberapa masalah:
+AI Urban Farming Assistant aims to solve these problems by acting as a
+**personal AI farming companion**.
 
-Masyarakat kota tidak tahu cara memulai urban farming
+The platform helps users:
 
-Sulit menemukan vendor instalasi dan perawatan
+1.  Plan their urban farming setup
+2.  Grow plants with AI guidance
+3.  Diagnose plant health issues
+4.  Connect with nearby urban farming experts
 
-Pengetahuan budidaya masih tersebar dan tidak terstruktur
+------------------------------------------------------------------------
 
-Akses ke pupuk, bibit, dan perlengkapan sering tidak terintegrasi
+# Core Product Journey
 
-Monitoring tanaman masih manual
+The application supports the following user journey:
 
+1.  User wants to start urban farming but feels confused.
+2.  User talks to the AI assistant.
+3.  AI generates a personalized urban farming plan.
+4.  User begins growing plants.
+5.  User uploads plant photos if issues occur.
+6.  AI analyzes the plant and provides diagnosis.
+7.  The platform recommends nearby experts if additional help is
+    required.
 
-Karena itu diperlukan platform digital yang menghubungkan masyarakat, vendor, dan penyedia teknologi urban farming.
+This creates a complete workflow:
 
+Start → Plan → Grow → Diagnose → Get Expert Help
 
----
+------------------------------------------------------------------------
 
-2. Solusi yang Ditawarkan
+# Target Users
 
-Sebuah platform digital urban farming ecosystem yang menghubungkan:
+Primary users are urban residents who want to grow plants in limited
+spaces such as:
 
-Pemilik rumah / komunitas
+-   Apartment balconies
+-   Rooftop gardens
+-   Small backyard gardens
+-   Indoor hydroponic systems
+-   Small aquaponic setups
 
-Vendor instalasi kebun
+Many of these users are beginners with little agricultural knowledge.
 
-Penyedia produk pertanian
+------------------------------------------------------------------------
 
-Tenaga perawatan kebun
+# Key Features
 
-Knowledge base pertanian
+## 1. AI Chat Consultation
 
+Users can interact with an AI assistant to ask questions about:
 
-Konsepnya bisa dianalogikan sebagai:
+-   plant care
+-   hydroponic systems
+-   nutrients
+-   pest control
+-   urban farming best practices
 
-“Gojek untuk layanan kebun dan urban farming.”
+The interface works like a conversational AI similar to ChatGPT but
+specialized for plant care.
 
+------------------------------------------------------------------------
 
----
+## 2. AI Urban Farming Planner
 
-3. Layanan Utama Platform
+The AI can generate a personalized plan for beginners based on:
 
-1️⃣ Marketplace Produk Urban Farming
+-   available space
+-   climate
+-   farming goals
+-   experience level
 
-Menjual kebutuhan kebun seperti:
+The plan may include:
 
-Bibit tanaman
+-   recommended plants
+-   planting schedule
+-   hydroponic setup suggestions
+-   nutrient guidance
 
-Nutrisi hidroponik
+------------------------------------------------------------------------
 
-Pupuk
+## 3. Image-Based Plant Diagnosis
 
-Media tanam
+Users can upload plant images directly through the chat interface.
 
-Peralatan kebun
+The AI analyzes:
 
-Kit hidroponik / aquaponik
+-   leaf color changes
+-   pest symptoms
+-   plant disease patterns
+-   nutrient deficiencies
 
+The system then provides:
 
+-   problem identification
+-   explanation
+-   recommended actions
 
----
+Example output:
 
-2️⃣ Jasa Instalasi Kebun
+Problem detected: Nitrogen deficiency
 
-Pengguna bisa memesan vendor untuk instalasi seperti:
+Recommended actions: - increase nutrient concentration - check water
+pH - monitor plant growth
 
-Sistem hidroponik
+------------------------------------------------------------------------
 
-Aquaponik
+## 4. Knowledge-Based AI Responses
 
-Tong budidaya lele
+The AI assistant uses a knowledge base containing information about:
 
-Vertical garden
+-   hydroponic farming
+-   plant diseases
+-   nutrient management
+-   pest control
+-   urban agriculture practices
 
-Smart garden
+This allows the AI to provide contextual answers instead of generic
+responses.
 
+------------------------------------------------------------------------
 
-Vendor dapat berasal dari:
+## 5. Expert Discovery
 
-UMKM lokal
+If a problem requires professional assistance, the platform recommends
+nearby urban farming experts.
 
-Komunitas urban farming
+Experts may include:
 
-Startup agritech
+-   hydroponic installation services
+-   urban farming consultants
+-   garden maintenance services
+-   hydroponic equipment vendors
 
+Each expert card contains:
 
+-   expert name
+-   service type
+-   location
+-   distance
+-   contact button
 
----
+------------------------------------------------------------------------
 
-3️⃣ Jasa Perawatan Kebun
+# Vendor Ecosystem
 
-Mirip layanan tukang kebun on-demand:
+The platform also supports service providers.
 
-Maintenance sistem hidroponik
+Urban farming professionals can register as **Verified Vendors**.
 
-Pengecekan nutrisi
+These vendors receive potential leads from users who need help.
 
-Penggantian tanaman
+------------------------------------------------------------------------
 
-Perawatan rutin
+## Vendor Features
 
+### Vendor Registration
 
-Modelnya bisa:
+Experts can register by submitting:
 
-On-demand
+-   name
+-   business name
+-   service type
+-   location
+-   contact information
 
-Subscription bulanan
+------------------------------------------------------------------------
 
+### Vendor Dashboard
 
+Verified vendors receive access to a simple business dashboard where
+they can:
 
----
+-   manage their services
+-   view incoming leads
+-   track profile views
+-   contact potential customers
 
-4️⃣ Knowledge Base Urban Farming
+------------------------------------------------------------------------
 
-Platform menyediakan pusat pembelajaran seperti:
+# Monetization Concept
 
-Panduan memulai urban farming
+The prototype includes a freemium model.
 
-Tutorial hidroponik
+Free users:
 
-Manajemen nutrisi
+-   limited daily plant image diagnosis
 
-Pengendalian hama
+Pro users:
 
-Forum komunitas
+-   unlimited image uploads
+-   advanced plant health insights
+-   priority AI analysis
 
+This upgrade is shown in the chat interface as:
 
+Upgrade to Pro
 
----
+------------------------------------------------------------------------
 
-4. Fitur Teknologi Tambahan
+# Platform Structure
 
-Agar lebih inovatif untuk lomba, bisa ditambahkan beberapa teknologi.
+The prototype contains several main pages:
 
-AI Plant Diagnosis
+1.  Landing Page
+2.  AI Chat Consultation Page
+3.  Diagnosis Result Panel
+4.  Expert Recommendation Page
+5.  Become a Verified Vendor Page
+6.  Vendor Registration Page
+7.  Vendor Dashboard
 
-User cukup foto tanaman.
+------------------------------------------------------------------------
 
-AI akan mendeteksi:
+# Design Principles
 
-Penyakit tanaman
+The UI design focuses on:
 
-Kekurangan nutrisi
+-   simplicity
+-   clarity
+-   beginner friendliness
+-   nature-inspired aesthetics
 
-Serangan hama
+The design style uses:
 
+-   green color themes
+-   clean modern UI
+-   friendly visual language
 
-Lalu memberikan rekomendasi solusi.
+------------------------------------------------------------------------
 
+# Hackathon Focus
 
----
+This project is optimized for a hackathon demo.
 
-AI Nutrient Estimation
+The prototype focuses on demonstrating the core value quickly through a
+simple flow:
 
-Menggunakan gambar tanaman untuk memperkirakan:
+Ask AI → Upload plant photo → Get diagnosis → Find experts
 
-Kebutuhan nutrisi
+The goal is to showcase how AI can support urban agriculture and build
+an ecosystem connecting farmers and service providers.
 
-Jadwal pemberian pupuk
+------------------------------------------------------------------------
 
-Status kesehatan tanaman
+# Future Vision
 
+Potential future features include:
 
+-   plant health timeline tracking
+-   automated plant care reminders
+-   sensor integration for smart farming
+-   marketplace for farming equipment
+-   community features for urban farmers
 
----
+------------------------------------------------------------------------
 
-IoT Smart Garden (Future Development)
+# Project Status
 
-Sensor yang dapat memonitor:
-
-pH air
-
-Nutrisi
-
-Suhu
-
-Kelembapan
-
-
-Data bisa langsung masuk ke aplikasi.
-
-
----
-
-Blockchain Supply Chain (Optional Innovation)
-
-Digunakan untuk:
-
-Transparansi distribusi hasil panen
-
-Traceability produk urban farming
-
-Manajemen rantai pasok pangan lokal
-
-
-
----
-
-5. Model Bisnis
-
-Platform menghasilkan revenue dari:
-
-Komisi transaksi marketplace
-
-Komisi jasa instalasi
-
-Subscription perawatan kebun
-
-Penjualan produk agritech
-
-Premium fitur monitoring
-
-
-
----
-
-6. Dampak terhadap Ketahanan Pangan
-
-Platform ini dapat membantu:
-
-Mendorong produksi pangan di perkotaan
-
-Mengaktifkan UMKM urban farming
-
-Membuka lapangan kerja baru
-
-Mengurangi ketergantungan distribusi pangan dari luar kota
-
-Meningkatkan literasi pertanian masyarakat kota
-
-
-
----
-
-7. Potensi Pengembangan
-
-Ke depan platform dapat berkembang menjadi:
-
-Marketplace hasil panen urban farming
-
-Platform komunitas pertanian kota
-
-Integrasi dengan program pemerintah
-
-Smart city agriculture system
-
-
-
----
-
-8. Kesimpulan
-
-Platform ini berpotensi menjadi ekosistem digital urban farming yang menghubungkan masyarakat, vendor, dan teknologi untuk mendukung ketahanan pangan perkotaan secara berkelanjutan.
-
-
----
-
-Jujur ya, ide kamu ini lumayan kuat untuk lomba pemerintah, karena mereka suka banget kata-kata seperti:
-
-ketahanan pangan
-
-digitalisasi pertanian
-
-pemberdayaan masyarakat
-
-smart agriculture
-
-
-Jadi framingnya memang harus ke sana.
-
-
----
+This project is currently a **prototype and proof-of-concept** developed
+for a hackathon.

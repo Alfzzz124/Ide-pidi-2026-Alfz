@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a422b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#151d18",
+                        "accent": "#2d5a3f",
+                        "neutral-soft": "#e8edeb",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Recommended Experts | Urban Farming Assistant</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex flex-col min-h-screen">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-8">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-3xl font-bold">potted_plant</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight">Urban Farming Assistant</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Experts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors font-medium" href="#">My Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors font-medium" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden sm:flex items-center relative w-full max-w-xs">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 rounded-xl border-none bg-neutral-soft dark:bg-slate-800 focus:ring-2 focus:ring-primary/50" placeholder="Search experts..." type="text"/>
+</label>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-neutral-soft dark:hover:bg-slate-800 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/10 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuuAi5nVMdZwBHLMc4hmiE9PbU61pouj6o8RXdqPj1oOQ0ZVr2dWH18KVgeD1Ml0CQfvHYCbckmdvu8en_tFXmXTAQS3upJ794BKSmtzrndM6RJAIq64UgApnAOyq4AIzWYAOzVAlc7FvPuiluzvdsjjPMBTMDQTG_NVY1ku3cZcEGrTkRT7kkwcnJL4GzR4B-m3cTs1bQlNPu5SY233na8ZKnBSGnAtIuszuuxUZ8BA-WfPVQcC5SQeaKk2jcL-IZ-nExU-WV85o"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-8 flex flex-col gap-8">
+<!-- Hero Header Section -->
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black text-slate-900 dark:text-slate-50 tracking-tight">Recommended Experts Near You</h1>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl">Connect with verified urban farming professionals in your area to scale your home harvest and maintain your green space.</p>
+</div>
+<!-- Filters Bar -->
+<div class="flex items-center gap-4 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-6 py-2 bg-primary text-white rounded-full text-sm font-semibold whitespace-nowrap">All Experts</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary/40 rounded-full text-sm font-semibold whitespace-nowrap transition-all">Hydroponics</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary/40 rounded-full text-sm font-semibold whitespace-nowrap transition-all">Consultants</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary/40 rounded-full text-sm font-semibold whitespace-nowrap transition-all">Maintenance</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary/40 rounded-full text-sm font-semibold whitespace-nowrap transition-all">Organic Pest Control</button>
+</div>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Side: Expert List (7/12) -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<!-- Expert Card 1 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow flex gap-5">
+<div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Vertical hydroponic farm installation example" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzp0QuiFprRNfuIrTvoxRFLeW8Zj2R_2p3QupoYadAdkU_zKzJo7PBuh0FUbM4opKBVXeVKWjr49Lgn_i7eGNkHk9UXuN9i-xEYF9DpLx3AV5JlynSfvaDXzendXWu_9c9kKSWP8ePTNHjo3hPO9_fJG8PvoryFFX2erLEHxntBzlCqsqYD8Omn1CwvCh2MJO8VitqqgbgY8y5e9uFE9PHXBewzVnQm5bGtQETax0Fs0TiW7bZqy6LIQS0dchW-riml3qcU3QaBvw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-bold text-lg">Green Thumb Solutions</h3>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs">verified</span> Verified
+                                        </span>
+</div>
+<p class="text-primary font-medium text-sm">Hydroponic Installation</p>
+</div>
+<div class="text-right">
+<div class="flex items-center text-amber-500 gap-0.5">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+<p class="text-slate-400 text-xs">124 reviews</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Brooklyn, NY</span>
+</div>
+<div class="flex items-center gap-1 font-semibold text-primary/80 dark:text-primary/100">
+<span class="material-symbols-outlined text-lg">near_me</span>
+<span>2.4 miles away</span>
+</div>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 bg-primary text-white py-2 rounded-lg font-bold hover:bg-accent transition-colors">Contact</button>
+<button class="px-3 border border-primary/20 rounded-lg text-primary hover:bg-neutral-soft transition-colors">
+<span class="material-symbols-outlined pt-1">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Expert Card 2 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow flex gap-5">
+<div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Gardening expert inspecting plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQmlOyOxtGjunRf_lK-DdTrIu56CwoaonfDPk9Rh2ASnpjVyh5ghXH_3egcfmU_7OKo5R8PwhGw1KQWNGejzYUUtLB0w_Ml69LsWBgqkEZ39NoDyRROeKuqQzZLvQ9quiDDpH3paQfcoCZpm6rxna_urtHNBbrnzIuYIF9-EBUP6C6cQnwStwhM4eicD8QsYQ8q16xpAcjs0frZDTQa9Ula-8WbC82y_dcbmBfg05MKP_iJ3gCUHXN-CSu--tL5oLsids_e8S0Mw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-bold text-lg">Urban Soil Consultants</h3>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs">verified</span> Verified
+                                        </span>
+</div>
+<p class="text-primary font-medium text-sm">Agricultural Consultant</p>
+</div>
+<div class="text-right">
+<div class="flex items-center text-amber-500 gap-0.5">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+<p class="text-slate-400 text-xs">89 reviews</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Manhattan, NY</span>
+</div>
+<div class="flex items-center gap-1 font-semibold text-primary/80 dark:text-primary/100">
+<span class="material-symbols-outlined text-lg">near_me</span>
+<span>3.1 miles away</span>
+</div>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 bg-primary text-white py-2 rounded-lg font-bold hover:bg-accent transition-colors">Contact</button>
+<button class="px-3 border border-primary/20 rounded-lg text-primary hover:bg-neutral-soft transition-colors">
+<span class="material-symbols-outlined pt-1">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Expert Card 3 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow flex gap-5">
+<div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Lush terrace garden maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Q4GI5HO_D6oQcg6r4Q0bJqCEgscnTC1wMaSpfjKbWPWDi960x2x1tLzR7l1q3lReLOEP_M-UsIHhayFiYsaYNh9SVLj4pgyS_u5CI5Xxk7f4fcYeNAdXn3L-sYuWOwUG2ve6vpWuMS2ggjCpAPSbAMYpPoQUPdVtZ34AiFrz1HrSix4JUYp4Ud3oRdZOrpWjVXkE205XEwjE96ueYtnuTz1P4NMJS7a6dGWR0Jw8qHlnN5mg0yB9hzuY64M_q_4fz0pO36vNtyc"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-bold text-lg">Bloom &amp; Harvest</h3>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs">verified</span> Verified
+                                        </span>
+</div>
+<p class="text-primary font-medium text-sm">Garden Maintenance</p>
+</div>
+<div class="text-right">
+<div class="flex items-center text-amber-500 gap-0.5">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+<p class="text-slate-400 text-xs">56 reviews</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Queens, NY</span>
+</div>
+<div class="flex items-center gap-1 font-semibold text-primary/80 dark:text-primary/100">
+<span class="material-symbols-outlined text-lg">near_me</span>
+<span>5.2 miles away</span>
+</div>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 bg-primary text-white py-2 rounded-lg font-bold hover:bg-accent transition-colors">Contact</button>
+<button class="px-3 border border-primary/20 rounded-lg text-primary hover:bg-neutral-soft transition-colors">
+<span class="material-symbols-outlined pt-1">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Map Preview (5/12) -->
+<div class="lg:col-span-5 sticky top-28 h-[calc(100vh-160px)] min-h-[500px]">
+<div class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/10 bg-neutral-soft shadow-lg group">
+<!-- Simulated Map -->
+<div class="absolute inset-0 grayscale opacity-80" data-alt="Detailed city map of New York area" data-location="New York City" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3aGhID_tR2kjjCqh8FF_FDiiyjOpQSaQ5h0K7eggGVmDOONHwHBGbx92MPd4U7TVOmbs283zWcvgmSn1WBNeS31i-QYz8j76CSHLaqaG34IsgqYvH4AdDV1O8y33Vpvaz93rbi1k5nnY_ows7BcYfZvQZBO2kVcTho-Ce07fdOMvcCIAe5EH1gauX8BAaiVDyoSLvuSpm1zriLg03_CMMGnJW0fzj48FFB8TFyN48ITc9Xcat6IsPeKQG0LBUd2CMjCC23mJ3WjE');">
+<!-- Overlay a real map texture feel -->
+<div class="w-full h-full bg-[radial-gradient(#1a422b33_1px,transparent_1px)] [background-size:24px_24px]"></div>
+</div>
+<!-- Map Pins -->
+<!-- Pin 1 -->
+<div class="absolute top-1/4 left-1/3 group/pin">
+<div class="relative flex flex-col items-center">
+<div class="bg-primary text-white px-3 py-1 rounded-lg text-xs font-bold shadow-xl mb-1 translate-y-2 opacity-0 group-hover/pin:translate-y-0 group-hover/pin:opacity-100 transition-all whitespace-nowrap">
+                                    Green Thumb Solutions
+                                </div>
+<div class="w-8 h-8 bg-primary rounded-full border-2 border-white flex items-center justify-center text-white shadow-xl cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">home_work</span>
+</div>
+<div class="w-1 h-2 bg-primary"></div>
+</div>
+</div>
+<!-- Pin 2 -->
+<div class="absolute top-1/2 left-1/2 group/pin">
+<div class="relative flex flex-col items-center">
+<div class="bg-primary text-white px-3 py-1 rounded-lg text-xs font-bold shadow-xl mb-1 translate-y-2 opacity-0 group-hover/pin:translate-y-0 group-hover/pin:opacity-100 transition-all whitespace-nowrap">
+                                    Urban Soil Consultants
+                                </div>
+<div class="w-8 h-8 bg-primary rounded-full border-2 border-white flex items-center justify-center text-white shadow-xl cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">psychology</span>
+</div>
+<div class="w-1 h-2 bg-primary"></div>
+</div>
+</div>
+<!-- Pin 3 -->
+<div class="absolute bottom-1/3 left-2/3 group/pin">
+<div class="relative flex flex-col items-center">
+<div class="bg-primary text-white px-3 py-1 rounded-lg text-xs font-bold shadow-xl mb-1 translate-y-2 opacity-0 group-hover/pin:translate-y-0 group-hover/pin:opacity-100 transition-all whitespace-nowrap">
+                                    Bloom &amp; Harvest
+                                </div>
+<div class="w-8 h-8 bg-primary rounded-full border-2 border-white flex items-center justify-center text-white shadow-xl cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">eco</span>
+</div>
+<div class="w-1 h-2 bg-primary"></div>
+</div>
+</div>
+<!-- User Pin -->
+<div class="absolute top-1/3 left-1/2">
+<div class="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-xl ring-4 ring-blue-500/30 animate-pulse"></div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<button class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-lg hover:bg-neutral-soft transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-lg hover:bg-neutral-soft transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="bg-primary text-white p-2 rounded-lg shadow-lg hover:bg-accent transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<!-- Map Legend / Tip -->
+<div class="absolute bottom-6 left-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-3 rounded-xl border border-primary/10 shadow-lg flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-wider">AI Suggestion</p>
+<p class="text-xs font-medium">3 experts matching your garden type found</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-12 px-6 lg:px-12 bg-white dark:bg-background-dark border-t border-primary/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 opacity-60">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="font-bold">Urban Farming Assistant</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary" href="#">About Us</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Help Center</a>
+<a class="hover:text-primary" href="#">Join as Expert</a>
+</div>
+<p class="text-xs text-slate-400">© 2024 Urban Farming AI Assistant. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UrbanGrow AI - Your Urban Farming Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a422b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#151d18",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<div class="flex items-center gap-2 text-primary dark:text-emerald-400">
+<span class="material-symbols-outlined text-3xl font-bold">potted_plant</span>
+<h2 class="text-xl font-bold tracking-tight">UrbanGrow AI</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#planner">AI Planner</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#experts">Expert Help</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#community">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-10 items-center justify-center rounded-xl bg-primary px-6 text-sm font-bold text-white hover:bg-opacity-90 transition-all">
+                    Get Started
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative px-6 py-12 lg:py-24">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+<div class="flex flex-col gap-8">
+<div class="space-y-4">
+<h1 class="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white lg:text-7xl">
+                                Start Your Urban Farming Journey with AI
+                            </h1>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 max-w-xl">
+                                Transform your balcony into a thriving ecosystem. No green thumb? No problem. Our AI handles the planning, setup, and health monitoring so you can enjoy the harvest.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex h-14 items-center justify-center rounded-xl bg-primary px-8 text-lg font-bold text-white shadow-lg hover:shadow-primary/20 transition-all">
+                                Start Planning with AI
+                            </button>
+<button class="flex h-14 items-center justify-center rounded-xl border-2 border-primary/20 bg-transparent px-8 text-lg font-bold text-primary hover:bg-primary/5 transition-all">
+                                View Demo
+                            </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square w-full overflow-hidden rounded-3xl bg-primary/10" data-alt="Modern urban apartment balcony with lush green plants and smart tech" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtdrJR6h1Mt8OF1gokxAFYZl7Tm_4vLtNMgA4yJET1-q73-NsxD-vFNMEqiFg4asEU5Evf1zVOSaeqUK1tfqcC8BzebeuJEdAylQFtWUpzqYXfb6WQcB5xsQxbl181hVFk638ZRIxCXFrprNeqBsVAbgFC3ulok9yE6ZGJIi8UUg0a1T17R1FwWvepbnj1aVjRkepHTlCekf_-4YVc0E4aOaAxby7HlJXLCJ2uq1QKpgfLcSixoa8uRWKgFgXX6VfvnAz0jGvNNrA'); background-size: cover; background-position: center;">
+<div class="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/90 p-4 backdrop-blur-md dark:bg-slate-900/90 shadow-xl border border-primary/10">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm">smart_toy</span>
+</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wider">AI Assistant</p>
+<p class="text-sm font-medium">"Your basil needs 200ml more water today."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pain Point Section -->
+<section class="bg-primary/5 py-20 px-6">
+<div class="mx-auto max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight lg:text-4xl">Want to Start Urban Farming but Feel Confused?</h2>
+<p class="mt-4 text-slate-600 dark:text-slate-400">We solve the common hurdles beginners face.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-8 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">psychology_alt</span>
+<h3 class="text-xl font-bold mb-2">What plants to grow?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Our AI analyzes your sunlight, wind patterns, and humidity to recommend the perfect match for your balcony's micro-climate.</p>
+</div>
+<div class="rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-8 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">water_drop</span>
+<h3 class="text-xl font-bold mb-2">How to start hydroponics?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Step-by-step guidance for soil-less growing systems. We simplify complex setups into easy daily actions.</p>
+</div>
+<div class="rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-8 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">assignment_late</span>
+<h3 class="text-xl font-bold mb-2">When to fertilize?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Get automated reminders and precise nutrient schedules tailored to each specific plant variety in your garden.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Farming Plan Section -->
+<section class="py-24 px-6 overflow-hidden" id="planner">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="relative bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-2xl border border-primary/5">
+<div class="flex items-center justify-between mb-8 border-b border-slate-100 dark:border-slate-700 pb-4">
+<h4 class="font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">assignment</span>
+                                    Your Custom Plan
+                                </h4>
+<span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Active</span>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="h-16 w-16 rounded-xl bg-slate-100 dark:bg-slate-700 overflow-hidden" data-alt="Fresh basil leaves close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqToy_VFRXqvKw8TNmX_Y8Xi7q_34A39mAXRi2kPFTHbuNaGLQlR8AJESLNLhtj6M6JSKag0FYkeXVdjAoLng4d7RFS3GdWSsG8-Kce9iecxpXHVkxepcT_5qRDxSiu1cbY_-8nU_pa7G7VM9Q3DqeA30vO2SOep9k6p1nw37uQOvrF-gXU9rXm4_qrtyLpepTcBuJZmMCUha8yGq61UkyXIZieTTiMPI2JexcSdnha4ojs5irM_t_loAzp7zTvBsEr7cvlJv1qXY'); background-size: cover;"></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="font-bold">Genovese Basil</h5>
+<span class="text-xs text-slate-400 font-medium">85% Match</span>
+</div>
+<p class="text-xs text-slate-500 mb-2">Recommended: Deep pot, indirect light</p>
+<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-700 rounded-full">
+<div class="h-1.5 bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800">
+<p class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold uppercase">Setup</p>
+<p class="text-sm font-semibold">Vertical Tower</p>
+</div>
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800">
+<p class="text-[10px] text-blue-700 dark:text-blue-400 font-bold uppercase">Schedule</p>
+<p class="text-sm font-semibold">Water every 3 days</p>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl">
+<p class="text-xs font-bold mb-2">AI Guidance</p>
+<p class="text-sm text-slate-600 dark:text-slate-300 italic">"Based on your local forecast of 28°C next week, increase misting frequency to prevent leaf burn."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<h2 class="text-4xl font-bold mb-6">Your AI Urban Farming Planner</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">
+                            Forget generic advice. Our AI creates a personalized blueprint for your specific space, time availability, and dietary goals. 
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<span class="font-medium">Curated plant varieties for your light levels</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<span class="font-medium">Optimized layout designs for small spaces</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<span class="font-medium">Nutrient and irrigation schedules that learn from you</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-24 bg-slate-900 text-white overflow-hidden" id="how-it-works">
+<div class="mx-auto max-w-7xl px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold mb-4">A Journey from Seed to Harvest</h2>
+<p class="text-slate-400">Transform your space in four simple steps.</p>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-primary/30 -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<div class="flex flex-col items-center text-center group">
+<div class="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<h3 class="text-xl font-bold mb-3">1. Talk to AI</h3>
+<p class="text-sm text-slate-400">Tell us about your space, sunlight, and what you love to eat.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<h3 class="text-xl font-bold mb-3">2. Get Plan</h3>
+<p class="text-sm text-slate-400">Receive a custom hardware and plant plan tailored for you.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</div>
+<h3 class="text-xl font-bold mb-3">3. Grow &amp; Diagnose</h3>
+<p class="text-sm text-slate-400">Monitor growth. Snap a photo if plants look sad—AI diagnoses instantly.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="text-xl font-bold mb-3">4. Find Experts</h3>
+<p class="text-sm text-slate-400">Connect with local pros for maintenance or advanced scaling help.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section -->
+<section class="py-24 px-6">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-8 rounded-3xl bg-background-light dark:bg-slate-800/50 border border-primary/5 hover:border-primary/20 transition-all">
+<div class="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="text-lg font-bold mb-2">AI Planner</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Precision mapping of your urban garden for maximum yield.</p>
+</div>
+<div class="p-8 rounded-3xl bg-background-light dark:bg-slate-800/50 border border-primary/5 hover:border-primary/20 transition-all">
+<div class="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">health_metrics</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Plant Diagnosis</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Identify pests and diseases from a simple smartphone photo.</p>
+</div>
+<div class="p-8 rounded-3xl bg-background-light dark:bg-slate-800/50 border border-primary/5 hover:border-primary/20 transition-all">
+<div class="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Knowledge Base</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Library of urban farming techniques from soil to hydro.</p>
+</div>
+<div class="p-8 rounded-3xl bg-background-light dark:bg-slate-800/50 border border-primary/5 hover:border-primary/20 transition-all">
+<div class="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Expert Access</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Direct line to verified urban farmers in your city.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Expert Ecosystem -->
+<section class="py-24 px-6 bg-primary/5" id="experts">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-4xl font-bold mb-4">Get Help from Real Experts</h2>
+<p class="text-slate-600 dark:text-slate-400">Sometimes you need a human touch. Consult with our verified pros.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+                        View all experts <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md overflow-hidden group">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-14 w-14 rounded-full bg-slate-200 overflow-hidden border-2 border-primary/20" data-alt="Portrait of an urban farming expert" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs34VYP9VqKKfCR_C0ehsCteKYrVk7uWFNCNdAS4YIy69sS6oAJx-BX5zuCuqygzYXNf_OhC-m923GtqWLTgQtTSOKdWStPVFONV5GRlddXTTTjnfhQ6wC7i-MOgcSm7iDg_uCgEAL-NROYbjXe1fwH3BGrbk1j5L1zKaabC-REAr3tfW-pYoBZ5Cv9uxfbNMo4zM-tCesSbQ1qbgPjsgA61fFZOG9FCElb4VPlR1WUbqo9d7tj40tTDYPj5L-7BK3_HRVFjw4HH0'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-yellow-500 fill-current">star</span> 4.9 (120 reviews)
+                                </p>
+</div>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Specializes in small-space hydroponics and balcony herb gardens.</p>
+<button class="w-full py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Book Consultation</button>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md overflow-hidden group">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-14 w-14 rounded-full bg-slate-200 overflow-hidden border-2 border-primary/20" data-alt="Portrait of a commercial urban farmer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdfitVc72A1DtEqadeajsdvguvL1mTo-nyVIgqRDjQkGqywRQ5DtVN3MmSShFHHZ2PyKtVcPMRv4wYfKMCi1BY14MNmEmVnzxXTZrB-Ft8vuMyzoH1_9LKiliBUBuMkmdn0Pu1q-cGviiaOVyKOP_MjhCaQr_LwUMcgdE39b5lWEc4I8AdnKf9ZBm5hfmH07G9Rus1qPpRzoq8yUwNZiBFlpxlef6FWCvj22Tk3QkkMWmjcL1IJ_fqAmQiyuPUbpr4EMNZAVCf3E0'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">Marcus Chen</h4>
+<p class="text-xs text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-yellow-500 fill-current">star</span> 5.0 (85 reviews)
+                                </p>
+</div>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Expert in vertical soil-based farming and automated irrigation systems.</p>
+<button class="w-full py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Book Consultation</button>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md overflow-hidden group">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-14 w-14 rounded-full bg-slate-200 overflow-hidden border-2 border-primary/20" data-alt="Portrait of a botanical specialist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVp1kc14Ao7dBwR5gGvXnx1vrJ_sPHD_uBrQsGhymUYZcm0V-h4hOlvkrrPDDlHKW_7f9hcBVdZPcOfgKBhmfdcAzeWCeXKfUXHnYMiTghhrj71WT-EHgyknNdYMy6-Na5TChZayxqmdMMZwq0FBjsAEfA9AZPTKcGeIgpSidtqhv7GQgOL_8SwrmnXbfB570GnX8JXeSSiu90Kud-63tFRy-s-2yt72BT_poxSpAFuWiG-DKVLkkAVLvn-FJ91yV4BUdC5YXUqXU'); background-size: cover;"></div>
+<div>
+<h4 class="font-bold">Elena Rodriguez</h4>
+<p class="text-xs text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-yellow-500 fill-current">star</span> 4.8 (210 reviews)
+                                </p>
+</div>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Pest control and organic fertilization specialist with 10+ years experience.</p>
+<button class="w-full py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Book Consultation</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 px-6">
+<div class="mx-auto max-w-5xl text-center">
+<div class="bg-primary rounded-[2rem] p-12 lg:p-20 text-white relative overflow-hidden">
+<!-- Abstract Background Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+<h2 class="text-4xl lg:text-5xl font-bold mb-8 relative z-10">Ready to Start Your Urban Garden?</h2>
+<p class="text-lg text-emerald-100/80 mb-10 max-w-2xl mx-auto relative z-10">
+                        Join over 10,000 urban farmers who turned their apartments into green havens with the help of AI.
+                    </p>
+<div class="flex flex-wrap justify-center gap-4 relative z-10">
+<button class="h-14 px-8 rounded-xl bg-white text-primary font-bold text-lg hover:bg-emerald-50 transition-all flex items-center gap-2 shadow-xl">
+<span class="material-symbols-outlined">rocket_launch</span>
+                            Start Planning with AI
+                        </button>
+<button class="h-14 px-8 rounded-xl bg-primary/20 border border-white/20 text-white font-bold text-lg hover:bg-primary/30 transition-all flex items-center gap-2 backdrop-blur-sm">
+<span class="material-symbols-outlined">forum</span>
+                            Chat with Assistant
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark py-12 px-6 border-t border-primary/5">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">potted_plant</span>
+<h2 class="text-lg font-bold">UrbanGrow AI</h2>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="h-5 w-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="h-5 w-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.669-.072-4.949-.2-4.354-2.62-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="text-center text-xs text-slate-400">
+                © 2024 UrbanGrow AI. Helping the world grow greener, one balcony at a time.
+            </div>
+</div>
+</footer>
+</body></html>

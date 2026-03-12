@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a422b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#151d18",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AI Urban Farming Assistant - Vendor Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white dark:bg-background-dark border-r border-primary/10 flex flex-col h-full">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">potted_plant</span>
+</div>
+<div>
+<h1 class="text-primary font-bold text-lg leading-tight">AI Urban</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Vendor Portal</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span>Services</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="p-4 rounded-xl bg-primary/5 border border-primary/10">
+<div class="flex items-center gap-3 mb-3">
+<div class="size-10 rounded-full bg-slate-200" data-alt="Vendor profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgiMLo9eZT8bQY2-20Q9GMt-m9GRfEtV_bA3ETT_Tt3kEWOdzkCItS8gx73578ccH3cisrPOHHYJUXsOcnRRN0yoid2_TEpdUcdZzBRd3cUogiXBaTkJdeoJNIPUledT9ibOLWOLTSMSH_DlDc_2wlb4vka0QVGVi7pvXMEnI28ae3skhzE2Sz4b4OVQN8xSYK99TpcLx6CKxrJrN0MVlMRg2CeqhFiiPoq9gMsDDRuk6fboTaQpmH03LxaSaE9q3ZkychP0OxpZM')"></div>
+<div>
+<p class="text-sm font-bold text-primary">Green Roots Co.</p>
+<p class="text-xs text-slate-500">Pro Plan</p>
+</div>
+</div>
+<button class="w-full py-2 text-xs font-bold text-primary bg-white border border-primary/20 rounded-lg hover:bg-primary/5">View Public Profile</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto flex flex-col">
+<!-- Top Header -->
+<header class="h-16 bg-white dark:bg-background-dark border-b border-primary/10 px-8 flex items-center justify-between sticky top-0 z-10">
+<h2 class="text-xl font-bold text-primary">Vendor Dashboard</h2>
+<div class="flex items-center gap-6">
+<div class="relative max-w-md hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search inquiries..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-[1px] bg-primary/10"></div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-medium">Urban Gardener Admin</span>
+<span class="material-symbols-outlined text-slate-400">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 space-y-8">
+<!-- Analytics Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<span class="text-emerald-600 text-sm font-bold bg-emerald-100 px-2 py-1 rounded-lg">+12.5%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1">Total Leads</p>
+<h3 class="text-3xl font-bold text-primary tracking-tight">42</h3>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-orange-100 text-orange-600">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-emerald-600 text-sm font-bold bg-emerald-100 px-2 py-1 rounded-lg">+2%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1">New Requests</p>
+<h3 class="text-3xl font-bold text-primary tracking-tight">5</h3>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-blue-100 text-blue-600">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<span class="text-emerald-600 text-sm font-bold bg-emerald-100 px-2 py-1 rounded-lg">+18%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1">Profile Views</p>
+<h3 class="text-3xl font-bold text-primary tracking-tight">128</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Service Management (1/3 column) -->
+<div class="xl:col-span-1 space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="text-lg font-bold text-primary">Active Services</h4>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-base">add_circle</span>
+                                Add Service
+                            </button>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-background-dark p-4 rounded-xl border border-primary/10 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Hydroponic Installation</p>
+<p class="text-xs text-slate-500">Leafy greens indoor setup</p>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-xl leading-none">edit</span>
+</button>
+</div>
+<div class="bg-white dark:bg-background-dark p-4 rounded-xl border border-primary/10 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">smart_toy</span>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">AI Nutrient Monitoring</p>
+<p class="text-xs text-slate-500">Smart sensors &amp; analytics</p>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-xl leading-none">edit</span>
+</button>
+</div>
+<div class="bg-white dark:bg-background-dark p-4 rounded-xl border border-primary/10 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">pest_control</span>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Organic Pest Control</p>
+<p class="text-xs text-slate-500">Natural prevention strategies</p>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-xl leading-none">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Recent Customer Requests (2/3 column) -->
+<div class="xl:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="text-lg font-bold text-primary">Recent Inquiries</h4>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All Leads</a>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-primary/10 overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-primary/5 text-primary text-xs font-bold uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4">Customer</th>
+<th class="px-6 py-4">Issue Description</th>
+<th class="px-6 py-4">Location</th>
+<th class="px-6 py-4 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-primary/[0.02] transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyI4OVJo8j_TpwpT-nYpo-B5q4ucY6dTjdHGNPvg87uUPgxYFASLzXJ4i4t6mgvQ2Op6WSLKUd3tvfy2ZEgVliRRPmC5l3BC0nLcKIjxOWnB8OK6VAgeYVgv7qi2OWIHBz7F7wjKm5oeZkED_pEDlf8mbSEeu7aChi-jEvOSOzo8pIElqy01U7UIL3Ic2Do6BeVbjknykaAxl6J94ylRJeb49b0iDOCEgBQdLKUGDJkqb0_sDvxdjRUOTBklUcRwK1_iHdNXCO46k')"></div>
+<span class="font-medium text-sm">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">Yellowing leaves on lettuce</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                                Brooklyn, NY
+                                            </div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Contact</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/[0.02] transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB2Khg7h-IkBQ_waLxN3IcqbGg7KnHWygSmgIrvT1iKcvqXtDBvOt2cC86IPGoAs-EAhvewYBk9T7hfL1jN-hkZLm_cSPltU7I5pxpZ4kYqWOuWko5GxmluH6HA2scWB94DYTfB-JImO7RudssgA41jYm8hz0LzY4OanqwGjvzFG08zmq5y4-2DF20GSfkxU1lOvHEGGreHVC4Znv2TZoRgbxuLBH1309oijG6dZ8ghEWpSuDotSjiir3AlJ44s9HueA-eZhh2gJs')"></div>
+<span class="font-medium text-sm">Marcus Chen</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">Pump failure in Tower Garden</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                                Austin, TX
+                                            </div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Contact</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/[0.02] transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUOsEM41ztSfpag-JAcguaWppO5YhAE7D5YX7glLoqWr-1J8oMR7rXxjFvlK4Px0_9LVFiP-Jkf4aXzA7iW61wQhe5mHdE75EAxptG99ZuZut1BCayQ-aWLSibC8xHCGw9uccf-PfiSflnHBxc2h_r2zXHxMe3Y5_PweDAjv8H9OeTd-a5vFN4rtcP7527cX48jlWLhw5onBe4IfKZIFTQ9gjOnMlIRSNkkjg-NExadMpWJCJAXefCRgmNu1-8WJPewBSvz5kpJkg')"></div>
+<span class="font-medium text-sm">Elena Rodriguez</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">New balcony garden setup</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                                Miami, FL
+                                            </div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Contact</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/[0.02] transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5_0ZQ1Dc5eXPTNLKBhFKw8MWN3OejlU_ECBT63j7bxwaC8erty_V0LfQQTn92d8OnvAhDMRwXoG9aOO1usqCFyXIgslOrm3QSsET6zOx17FgmNGTz76LjpfxuoC6s-GyONX6A0uRLHOmkHqHWdN4aaBy2j7q0yF90T_y8IDJ1EMEdON2LfcSH4OS53rCA-CD7iOvtDa-jUNHaOJsOC0b8GtD0LihVO_X4-9U6XtSKvK_4kzw8rFeVdXF_loyXerme7g_9fMgq5WM')"></div>
+<span class="font-medium text-sm">David Kim</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">White mold on tomato stems</p>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                                Seattle, WA
+                                            </div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Contact</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- AI Insights Section -->
+<div class="bg-primary text-white rounded-2xl p-8 relative overflow-hidden">
+<div class="relative z-10 max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-emerald-400">auto_awesome</span>
+<span class="text-sm font-bold uppercase tracking-widest text-emerald-400">AI Assistant Insights</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Lead volume is up 25% for hydroponic services in your area.</h3>
+<p class="text-slate-300 mb-6">Based on local search trends and recent inquiries, customers are looking for indoor winter solutions. Consider promoting your "Leafy Greens Indoor Setup" service this week.</p>
+<button class="px-6 py-3 bg-white text-primary rounded-xl font-bold hover:bg-slate-100 transition-colors">Create Campaign</button>
+</div>
+<!-- Decorative Background Pattern -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-br from-white to-transparent" style="mask-image: linear-gradient(to bottom right, black, transparent);"></div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="p-8 mt-auto border-t border-primary/10 text-slate-500 text-sm">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 AI Urban Farming Assistant. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

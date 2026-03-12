@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Urban Farming Assistant - Expert Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a422b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#151d18",
+                        "accent-sage": "#6b8074",
+                        "ui-border": "#e2e8e5",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #dee3e0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-80 flex flex-col border-r border-ui-border bg-white dark:bg-background-dark/50 p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined block">psychology_alt</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">Urban Farming AI</h1>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 text-accent-sage transition-colors" href="#">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="font-medium text-sm">My Garden</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-fill-1">chat_bubble</span>
+<span class="font-bold text-sm">Expert Chat</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 text-accent-sage transition-colors" href="#">
+<span class="material-symbols-outlined">camera_indoor</span>
+<span class="font-medium text-sm">Diagnosis History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 text-accent-sage transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-6">
+<div class="bg-background-light p-4 rounded-xl border border-ui-border">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-accent-sage uppercase tracking-wider">Daily Diagnosis</span>
+<span class="text-xs font-bold text-primary">3 / 3</span>
+</div>
+<div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+<p class="text-[11px] text-accent-sage mt-2">Daily limit reached. Resets in 4h.</p>
+</div>
+<div class="relative overflow-hidden bg-primary text-white p-5 rounded-xl group">
+<div class="absolute -right-4 -top-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-8xl">eco</span>
+</div>
+<h3 class="font-bold text-lg mb-1 relative z-10">Upgrade to Pro</h3>
+<p class="text-xs text-white/80 mb-4 relative z-10">Unlimited plant diagnosis and advanced growth insights.</p>
+<button class="w-full py-2 bg-white text-primary font-bold text-sm rounded-lg hover:bg-slate-50 transition-colors relative z-10">
+                    Get Started
+                </button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col relative bg-white/50">
+<header class="h-16 border-b border-ui-border flex items-center justify-between px-8 bg-white/80 backdrop-blur-md sticky top-0 z-20">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-sm font-semibold">AI Assistant Online</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-accent-sage hover:bg-slate-100 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover" data-alt="User profile avatar smiling person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClZQhXCROrdokm8u20U36IiztXa7HD34Sr9dDhq5vH0qWLQk4F72iOoQCt8bcJGLp8gyoZo4iXtqtPHqxO0xrP7xo4HErivBZp1eU4hCdsZYV6by8qv0GTAByhOKbS8TSQCtrEs1rNvIO-i_MGXS5D07EVWYn454VIuO68Ldoptt3G9q8rT64IPcdfUuHMQsr1wdaTq6cK6g3GrvpmcPr_AGVKz3NRmwHaVl6g2lFPRp-NjTJALlCHre-M8rl8Zit52fxv4XDz_NY"/>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar space-y-8 max-w-4xl mx-auto w-full">
+<div class="flex flex-col items-end gap-2">
+<div class="bg-primary text-white px-5 py-3 rounded-2xl rounded-tr-none shadow-sm max-w-[80%]">
+<p class="text-sm leading-relaxed">My tomato plant leaves are turning yellow.</p>
+</div>
+<span class="text-[10px] text-accent-sage uppercase font-bold px-1">You • 10:24 AM</span>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-xl">smart_toy</span>
+</div>
+<div class="flex flex-col gap-3 max-w-[80%]">
+<div class="bg-white border border-ui-border px-5 py-4 rounded-2xl rounded-tl-none shadow-sm">
+<p class="text-sm leading-relaxed text-slate-800">
+                            I can help with that! Tomato leaves turning yellow can be caused by several factors including nutrient deficiency, watering issues, or pests. 
+                            <br/><br/>
+                            Please upload a clear photo of the leaves for a detailed diagnosis.
+                        </p>
+</div>
+<div class="bg-emerald-50 border border-emerald-100 p-6 rounded-2xl shadow-sm border-l-4 border-l-primary">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h4 class="font-bold text-primary">Preliminary Analysis</h4>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-[10px] uppercase font-bold text-accent-sage block mb-1">Likely Problem</label>
+<p class="text-sm font-semibold text-slate-900">Possible Nitrogen Deficiency</p>
+</div>
+<div>
+<label class="text-[10px] uppercase font-bold text-accent-sage block mb-1">Observation</label>
+<p class="text-sm text-slate-700">Leaves turning yellow from the bottom up, overall stunted growth.</p>
+</div>
+<div class="pt-2 border-t border-emerald-100">
+<label class="text-[10px] uppercase font-bold text-accent-sage block mb-2">Recommended Actions</label>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-sm text-slate-800">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Increase nutrient concentration
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-slate-800">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Check water pH levels (Target: 6.0-6.8)
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+<span class="text-[10px] text-accent-sage uppercase font-bold px-1">AI Assistant • 10:25 AM</span>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white border-t border-ui-border">
+<div class="max-w-4xl mx-auto flex items-center gap-4">
+<button class="w-12 h-12 rounded-xl border-2 border-dashed border-primary/30 flex items-center justify-center text-primary hover:bg-primary/5 transition-colors group">
+<span class="material-symbols-outlined transition-transform group-active:scale-90">add_a_photo</span>
+</button>
+<div class="flex-1 relative flex items-center">
+<input class="w-full pl-4 pr-12 py-3 bg-background-light border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-sm placeholder:text-accent-sage" placeholder="Ask about your plants..." type="text"/>
+<button class="absolute right-2 p-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-lg leading-none">send</span>
+</button>
+</div>
+</div>
+<div class="max-w-4xl mx-auto flex justify-center mt-3">
+<p class="text-[10px] text-accent-sage">AI can make mistakes. Verify important care advice with a specialist.</p>
+</div>
+</div>
+</main>
+<aside class="w-72 border-l border-ui-border bg-white p-6 hidden xl:flex flex-col gap-6">
+<div>
+<h4 class="font-bold text-sm text-primary mb-4 uppercase tracking-widest">Plant Profile</h4>
+<div class="rounded-xl overflow-hidden aspect-square relative mb-3 group">
+<img class="w-full h-full object-cover" data-alt="Vibrant healthy tomato plant in urban pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1QF64qNh1rJTFI3UuulNh_HBiqoHj1wyb7Rhdmf02gDVsQbbqZb_ovpQB31CNHYspAbYw8k2-G6VsFZbssDvanWybDaoo01wMRk5bf5XQobRuwezuU_apg1EHGucroginZ5fVCx4V_zxA8nohdrVqQlr_GsPF5DEmRhZ0UMhXGyecrfUpw7RO7xDobeJP69E33BGHdSlekLHqn1k4Hu6VoBfS02cU8CFmGe6jEMIPcxJuouP3tIpRlThFtZnnI90WzxHw6rFvmj0"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="text-white bg-black/40 p-2 rounded-full">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</div>
+<h3 class="font-bold text-lg">Cherry Tomato</h3>
+<p class="text-xs text-accent-sage">Hydroponic Setup • 45 days old</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm text-primary uppercase tracking-widest">Live Stats</h4>
+<div class="grid grid-cols-1 gap-3">
+<div class="p-3 bg-background-light rounded-lg border border-ui-border">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] font-bold text-accent-sage">MOISTURE</span>
+<span class="text-xs font-bold text-primary">68%</span>
+</div>
+<div class="h-1 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-sky-500" style="width: 68%"></div>
+</div>
+</div>
+<div class="p-3 bg-background-light rounded-lg border border-ui-border">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] font-bold text-accent-sage">TEMP</span>
+<span class="text-xs font-bold text-primary">24°C</span>
+</div>
+<div class="h-1 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-orange-500" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="p-4 bg-emerald-900 rounded-xl text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Pro Insight</span>
+</div>
+<p class="text-xs leading-relaxed opacity-90 italic font-medium">"Your UV levels are peaking. Consider adding a shade cloth between 12 PM and 3 PM."</p>
+</div>
+</div>
+</aside>
+</div>
+</body></html>
